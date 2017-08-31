@@ -1,0 +1,32 @@
+{
+  "name": "walking-cat",
+  "version": "0.0.1",
+  "description": "Geographical coordinates parse, transform and format utilities",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/parakhod/walking-cat.git"
+  },
+  "main": "dist/index.js",
+  "scripts": {
+    "compile": "babel --stage 0 lib/ --out-dir dist/",
+    "demo": "node example"
+  },
+  "keywords": [
+    "geo",
+    "geograpgical",
+    "coordinates",
+    "map",
+    "measure",
+    "distance",
+    "latitude",
+    "longitude"
+  ],
+  "author": "Andrey Korinskiy",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "immutable": "^3.8.1"
+  }
+}

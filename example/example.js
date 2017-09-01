@@ -11,8 +11,8 @@ const s = [
   '38°06′56.37″N', '13°21′40.54″E'
 ];
 
-const lat = 13.3666933;
-const lng = 38.1190792;
+const lat = 38.1190792;
+const lng = 13.3666933;
 
 module.exports = function () {
 

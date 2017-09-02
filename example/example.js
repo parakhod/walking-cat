@@ -11,8 +11,11 @@ const s = [
   '38°06′56.37″N', '13°21′40.54″E'
 ];
 
-const lat = 38.1190792;
+const lat = 38.1190792; // Palermo
 const lng = 13.3666933;
+
+const lat2 = 37.308889; // Agrigento
+const lng2 = 13.5836336;
 
 module.exports = function () {
 
@@ -39,4 +42,14 @@ module.exports = function () {
   logV( `Create from immutable "coords(List([${lng}, ${lat}]))" \n`, coords(List([lng, lat])).toString());
 
   logV( `Convert to Array "coords(${lat}, ${lng}).toArray()" \n`, coords(lat, lng).toArray());
+
+  const c1 = coords(lat, lng);
+  const c2 = coords(lat2, lng2);
+
+  logV( `Measure distance: "coords(${lat}, ${lng}).distanceFrom(coords(${lat2}, ${lng2}), [ options ])"`);
+  logV( `Options: null (value in meters): `, c1.distanceFrom(c2));
+  logV( `Options: { precision: 1, units: 'km'}: `, c1.distanceFrom(c2, { precision: 1, units: 'km'}));
+  logV( `Options: { precision: 2, units: 'mi'}: `, c1.distanceFrom(c2, { precision: 2, units: 'mi'}));
+  logV( `Options: { precision: 0, units: 'ft'}: `, c1.distanceFrom(c2, { precision: 0, units: 'ft'}));
+  logV( `Options: { precision: 2, units: 'm', point: ','}: `, c1.distanceFrom(c2,  { precision: 2, units: 'm', point: ','}));
 };

@@ -1,6 +1,6 @@
 {
   "name": "walking-cat",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Geographical coordinates parse, transform and format utilities",
   "repository": {
     "type": "git",

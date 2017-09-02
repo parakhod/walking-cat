@@ -47,15 +47,25 @@ The library tries to detect the latitude and longitude order automatically.
 ### Converting
 #### To latitude and longitude
 `const { lat, lng } = catPosition1;`
-
 `console.log( lat, lng ); // output: 38.1190792, 13.3666933`
 
 #### To string
 `console.log( catPosition2.toString() ); // output: "38°6′56.37″N, 13°21′40.54″E"`
 
 #### To string with comma instead of the point
-`console.log( catPosition3.toString({point: ','}) ); // output: "55°45′7,99″N, 37°36′56,02″E"`
+`catPosition3.toString({point: ','}) // "55°45′7,99″N, 37°36′56,02″E"`
 
 #### To array
-`console.log( catPosition1.toArray() ); // output: [ 13.3666933, 38.1190792 ]`
- 
+`catPosition1.toArray() // [ 13.3666933, 38.1190792 ]`
+
+### Measure distance
+
+`const distance = coords(blackCat).distanceFrom(coords(whiteCat), options )`;
+#### Option: units
+Could be one of "m", "km", "mi", "yd", "ft"
+
+#### Option: precision
+Number value, if 0 - function returns rounded value, leave undefined if you don't need to trim the digits after the decimal point
+
+#### Option: point
+String value, you can replace the point with comma if needed. If _point_ is defined returned type is __string__, not __number__

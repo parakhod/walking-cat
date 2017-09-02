@@ -26,6 +26,10 @@ var _toArray2 = require('./toArray');
 
 var _toArray3 = _interopRequireDefault(_toArray2);
 
+var _distanceFrom2 = require('./distanceFrom');
+
+var _distanceFrom3 = _interopRequireDefault(_distanceFrom2);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -55,6 +59,14 @@ var WalkingCat = function () {
     key: 'toArray',
     value: function toArray() {
       return (0, _toArray3.default)(this.value);
+    }
+  }, {
+    key: 'distanceFrom',
+    value: function distanceFrom() {
+      var point = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+      var options = arguments[1];
+
+      return (0, _distanceFrom3.default)(this.value, point.value, options);
     }
   }]);
 
